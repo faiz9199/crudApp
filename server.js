@@ -6,15 +6,17 @@ app.use(bodyParser.json())
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send("<h1>Faiz Ahmad</h1>")
+  res.send("<h1>Welcome to my website/h1>")
 })
 
 
 const studentRoutes = require('./routes/studentRoutes')
 const menuRoutes = require('./routes/menuRoutes')
+const personRoutes = require('./routes/personRoutes')
 
 app.use('/students', studentRoutes)
 app.use('/menu', menuRoutes)
+app.use('/person', personRoutes)
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`)
