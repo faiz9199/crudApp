@@ -13,10 +13,12 @@ app.get('/', (req, res) => {
 const studentRoutes = require('./routes/studentRoutes')
 const menuRoutes = require('./routes/menuRoutes')
 const personRoutes = require('./routes/personRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 app.use('/students', studentRoutes)
 app.use('/menu', menuRoutes)
 app.use('/person', personRoutes)
+app.use('/', userRoutes)
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`)
